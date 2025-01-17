@@ -1,33 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const wishlist = [
+    { id: 1, name: "PlayStation 5", done: false },
+    { id: 2, name: "Macbook Pro", done: false },
+    { id: 3, name: "Tesla Model S", done: false }
+  ]
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <h1>My wishlist</h1>
+      <fieldset id="new wishes">
+        <p><input type="text" placeholder="Introduce tu deseo" /></p>
+        <p><button>Add wish</button></p>
+        <legend>Adding new wishes</legend>
+      </fieldset>
+      <div id="list">
+        <ul>
+          {wishlist.map(({ id, name, done }) => (
+            <li key={id}>
+              <input type="checkbox" defaultChecked={done} id={id} />
+              <label htmlFor={id}>{name}</label>
+            </li>
+          ))}
+        </ul>
+        <button>Achive done</button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
