@@ -1,20 +1,21 @@
+import React, { useState } from 'react'
 import './App.css'
+import WishInput from '../input/WishInput.jsx'
+
+const wishlist = [
+  { id: 1, name: "PlayStation 5", done: false },
+  { id: 2, name: "Macbook Pro", done: true },
+  { id: 3, name: "Tesla Model S", done: false }
+]
 
 function App() {
-  const wishlist = [
-    { id: 1, name: "PlayStation 5", done: false },
-    { id: 2, name: "Macbook Pro", done: true },
-    { id: 3, name: "Tesla Model S", done: false }
-  ]
+
+  const [wishes, setWishes] = useState(wishlist)
 
   return (
     <>
       <h1>My wishlist</h1>
-      <fieldset id="new wishes" className="wish-input">
-        <p><input type="text" placeholder="Introduce tu deseo" className='wish-input__field' /></p>
-        <p><button>Add wish</button></p>
-        <legend className="wish-input__label">Adding new wishes</legend>
-      </fieldset>
+      <WishInput setWishes={setWishes} />
       <div id="list">
         <ul className="wish-list">
           {wishlist.map(({ id, name, done }) => (
