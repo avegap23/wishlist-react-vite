@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 export default function WishItem({ wish, onDoneChange }) {
+    const [done, setDone] = useState(wish.done)
     return (
         <li
             key={wish.id}
@@ -10,7 +12,11 @@ export default function WishItem({ wish, onDoneChange }) {
                 type="checkbox"
                 defaultChecked={wish.done}
                 id={wish.id}
-                onChange={(e) => onDoneChange(!e.target.value)}
+                onChange={(e) => {
+                    wish.done = e.target.checked
+                    setDone(wish.done)
+                    // onDoneChange(wish.done)
+                }}
             />
             <label htmlFor={wish.id}>{wish.text}</label>
         </li>
