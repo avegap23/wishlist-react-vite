@@ -30,7 +30,7 @@ export default function WishInput({ onNewWish }) {
             </p>
             <p>
                 <button className="wish-clear" onClick={sendNewWish}>
-                    add wish
+                    Add wish
                 </button>
             </p>
             <legend className="wish-input__label">Adding new whishes</legend>
