@@ -1,9 +1,8 @@
-## TODO:
+# Wishlist React-Vite
 
-- [ ] Comentarios en el código *(si es que puedo comprender lo que estoy leyendo)*
-- [ ] Un README adecuado
+Aplicación en la que introduces "deseos" para ir tachándolos uno por uno. Se pueden limpiar los deseos cumplidos con un botón
 
-# Instalación:
+## Instalación y ejecución:
 
 1. Instalar dependencias:
 ```
