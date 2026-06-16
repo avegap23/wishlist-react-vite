@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import WishItem from "./WishItem.jsx";
 
 export default function WishList({ wishes, onWishDoneChange }) {
+    // Declaramos el elemento HTML que debería renderizar (la lista de deseos)
     return (
         <ul className="wish-list">
             {wishes.map((wish) => (
@@ -11,6 +12,7 @@ export default function WishList({ wishes, onWishDoneChange }) {
     )
 }
 
+// Declaramos el objeto "wishes"
 WishList.propTypes = {
     wishes: PropTypes.arrayOf(
         PropTypes.shape({

@@ -2,7 +2,10 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 
 export default function WishItem({ wish, onDoneChange }) {
+    // Hook de estado local
     const [done, setDone] = useState(wish.done)
+
+    // Declaramos el elemento HTML que debería renderizar (deseo individual)
     return (
         <li
             key={wish.id}
@@ -23,6 +26,7 @@ export default function WishItem({ wish, onDoneChange }) {
     )
 }
 
+// Declaramos el objeto "wish"
 WishItem.propTypes = {
     wish: PropTypes.shape({
         id: PropTypes.number,

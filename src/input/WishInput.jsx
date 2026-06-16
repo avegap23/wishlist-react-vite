@@ -33,7 +33,7 @@ export default function WishInput({ onNewWish }) {
                     Añadir deseo
                 </button>
             </p>
-            <legend className="wish-input__label">Añadiendo nuevos deseos</legend>
+            <legend className="wish-input__label">Añade un nuevo deseo</legend>
         </fieldset>
     );
 }

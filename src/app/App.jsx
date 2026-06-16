@@ -3,6 +3,7 @@ import './App.css'
 import WishInput from '../input/WishInput.jsx'
 import WishList from '../list/WishList.jsx'
 
+// Inicializando la wishlist con algunos elementos
 const wishlist = [
   { id: 1, text: "PlayStation 5", done: false },
   { id: 2, text: "Macbook Pro", done: true },
@@ -11,8 +12,10 @@ const wishlist = [
 
 function App() {
 
+  // Hook de estado local
   const [wishes, setWishes] = useState(wishlist)
 
+  // Empieza a renderizar en HTML
   return (
     <>
       <h1>Mi wishlist</h1>
